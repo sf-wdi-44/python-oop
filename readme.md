@@ -1,6 +1,6 @@
 # Intro to Object-Oriented Programming in Python
 
-## Learning Objectives - Ali
+## Learning Objectives
 
 - Review the principles of Object Oriented Programming
 - Describe the relationship between a **class** and an **instance**
@@ -12,7 +12,7 @@
 
 ## Framing: Review, why OOP?
 
-### Objects are Intuitive! - James
+### Objects are Intuitive!
 
 Objects help us build programs that model how we tend to think about the world.
 Human minds tend to break down the world into objects: trees, leaves, roads,
@@ -25,7 +25,7 @@ relevant data and functions into objects, grouping related data and behavior
 together. We think about them as individual, self-contained units. This 
 grouping of properties (data) and methods is a kind of **encapsulation**.
 
-### Objects Manage Complexity - Ali
+### Objects Manage Complexity
 
 Encapsulation is especially important as our programs get more and more 
 complex. We can't keep all the code (and what it does) in our head at once.
@@ -39,7 +39,7 @@ related to a person dancing. I can just think at a high level "ok, when a squad
 dances, all it's associated people dance". This is a form of *abstraction*... I
 don't need to think about the details, just what's happening at a high-level.
 
-### Ensuring Consistency - James
+### Ensuring Consistency
 
 Another advantage of *encapsulation* (grouping data and methods into objects) 
 is that these objects can be in control of their data. This usually means 
@@ -51,14 +51,14 @@ such that you can't directly change it's balance. Instead, you have to use the
 account, and they can enforce rules for consistency, such as "balance can't be
 less than zero".
 
-### Modularity - James
+### Modularity
 
 Objects should stand on their own and play well with others. If our objects
 are well-designed, then they interact with each other in well-defined ways.
 This allows us to refactor (rewrite) any object, and it should not impact
 (cause bugs) in other areas of our programs.
 
-## OOP Syntax: JavaScript vs. Python - Ali
+## OOP Syntax: JavaScript vs. Python
 
 In JavaScript, we could write this class...
 
@@ -73,7 +73,7 @@ class User {
   }
 }
 
-const me = new User('Ali')
+const me = new User('John')
 me.greet()
 ```
 
@@ -93,7 +93,7 @@ class User:
     def greet(self):
         print(f'Hi! My name is {self.name}')
 
-me = User('Ali')
+me = User('John')
 me.greet()
 ```
 
@@ -113,7 +113,7 @@ attribute that we will set in our `__init__` method. Finally, the `greet`
 method displays a greeting formatted with the `User` instance's name. At the
 end, we **instantiate** a new user with `me = User("Ali")`. 
 
-### Exercise: Create a `BankAccount` class. - James
+### Exercise: Create a `BankAccount` class.
 
 
 * Bank accounts should be created with the `type` of account (like "savings" or "checking").
@@ -196,7 +196,7 @@ class BankAccount:
 ```
 </details>
 
-## Inheritance in Python - Ali
+## Inheritance in Python
 
 Inheritance allows us to build new classes out of old classes.
 It allows us to extend functionality defined in a `parent`
@@ -275,7 +275,7 @@ class Android(Phone):
         self.keyboard = keyboard
 ```
 
-## Inheritance Syntax - James
+## Inheritance Syntax
 
 There are two new pieces of syntax used in the code above.
 
@@ -381,7 +381,7 @@ Overdraft account has $-28
 Overdraft account has $-28
 ```
 
-### What are Dunder Methods (Magic Methods)? - Ali
+### What are Dunder Methods (Magic Methods)?
 
 > Dunder is short-hand for *d*ouble *under*score.
 
@@ -410,20 +410,3 @@ Other useful dunder methods include...
 * `__getitem__` for using bracket notation on an instance of the class (i.e. `maddie['food']`)
 
 Such dunder exist for ***almost every operator***! [Reference on more](http://www.diveintopython3.net/special-method-names.html).
-
-### Exercise: Fancy Bank Accounts (feat. Magic Methods) - James
-
-* When you print the bank account, make it so that it prints a well-formatted blurb about the kind of account and its balance. (ex. `Savings Account: $50`) 
-    > [Formatted Strings in Python](https://docs.python.org/3.6/library/string.html#format-string-syntax)
-* Make it so that you can add the balances of two bank accounts by adding two instances of the class.
-    > Check out addition dunder methods! See link above.
-* Make it so that you can subtract, multiply, and divide the balances of two bank accounts by performing those mathematical operations on two instances of the class.
-    > Check out other arithmetical dunder methods! See link above.
-* Make it so that you can compare the balances of two bank accounts by using the greater than, less than, and equals to operators in Python on two instances of the class.
-    > Check out comparison dunder methods! See link above.
-
-## Bonus - You Do: Codebar - James
-
-> 20 minutes exercise. 5 minutes review.
-
-Clone down [this repo](https://git.generalassemb.ly/dc-wdi-python-django/codebar) and follow the instructions in the readme.
