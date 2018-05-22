@@ -113,25 +113,6 @@ attribute that we will set in our `__init__` method. Finally, the `greet`
 method displays a greeting formatted with the `User` instance's name. At the
 end, we **instantiate** a new user with `me = User("John")`. 
 
-### Exercise: Create a `BankAccount` class.
-
-
-* Bank accounts should be created with the `type` of account (like "savings" or "checking").
-* Each account should keep track of its current `balance` which should start at `0`.
-* Each account should have access to a `deposit` and a `withdraw` method.
-  * `withdraw` should return the amount withdrawn
-  * `deposit` should return the new account balance after depositing
-
-Create a checking account and a savings account. Withdraw money from the savings
-account and deposit that amount into the checking account.
-
-Bonuses: 
-1. Prevent withdrawing money if the balance will go negative.
-2. Start each account with an additional `overdraft_fees` property that starts
-at `0`. If a call to `withdraw` ends with the `balance` below zero then 
-`overdraft_fees` should be incremented by 20. You should also prevent the user
-from going below a balance of -100, including the overdraft fees.
-
 ## Inheritance in Python
 
 Inheritance allows us to build new classes out of old classes.
