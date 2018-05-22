@@ -111,7 +111,7 @@ each method in a Python class--`self` refers to the instance of the class, for
 A particular `User` or instance of the `User` class will have a `name`
 attribute that we will set in our `__init__` method. Finally, the `greet`
 method displays a greeting formatted with the `User` instance's name. At the
-end, we **instantiate** a new user with `me = User("Ali")`. 
+end, we **instantiate** a new user with `me = User("John")`. 
 
 ### Exercise: Create a `BankAccount` class.
 
@@ -304,7 +304,7 @@ class Android(Phone):
         super().__init__(phone_number)
 ```
 
-## Exercise: Write Bank Account Classes - Ali
+## Exercise: Write Bank Account Classes
 Let's practice writing classes and using inheritance by modelling different types
 of Bank accounts.
 
